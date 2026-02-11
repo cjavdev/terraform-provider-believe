@@ -6,9 +6,9 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/cjavdev/believe-go"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
-	"github.com/stainless-sdks/believe-go"
 	"github.com/stainless-sdks/believe-terraform/internal/apijson"
 	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )

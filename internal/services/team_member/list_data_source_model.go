@@ -5,10 +5,10 @@ package team_member
 import (
 	"context"
 
+	"github.com/cjavdev/believe-go"
+	"github.com/cjavdev/believe-go/packages/param"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-go"
-	"github.com/stainless-sdks/believe-go/packages/param"
 	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 

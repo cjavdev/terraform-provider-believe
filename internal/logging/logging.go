@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/stainless-sdks/believe-go/option"
+	"github.com/cjavdev/believe-go/option"
 
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 )
