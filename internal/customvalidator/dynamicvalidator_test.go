@@ -2,7 +2,7 @@ package customvalidator_test
 
 import (
 	"context"
-	"github.com/stainless-sdks/believe-terraform/internal/customvalidator"
+	"github.com/cjavdev/terraform-provider-believe/internal/customvalidator"
 	"math/big"
 	"testing"
 

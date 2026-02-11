@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	t "github.com/stainless-sdks/believe-terraform/internal/types"
+	t "github.com/cjavdev/terraform-provider-believe/internal/types"
 )
 
 var _ validator.Dynamic = subtypesValidator{}

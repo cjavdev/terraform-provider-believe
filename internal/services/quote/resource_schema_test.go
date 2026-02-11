@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/stainless-sdks/believe-terraform/internal/services/quote"
-	"github.com/stainless-sdks/believe-terraform/internal/test_helpers"
+	"github.com/cjavdev/terraform-provider-believe/internal/services/quote"
+	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestQuoteModelSchemaParity(t *testing.T) {

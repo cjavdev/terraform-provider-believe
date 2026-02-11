@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/stainless-sdks/believe-terraform/internal/importpath"
+	"github.com/cjavdev/terraform-provider-believe/internal/importpath"
 )
 
 func TestParseID(t *testing.T) {
