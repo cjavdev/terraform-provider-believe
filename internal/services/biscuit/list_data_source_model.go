@@ -5,9 +5,9 @@ package biscuit
 import (
 	"context"
 
+	"github.com/cjavdev/believe-go"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-go"
 	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 

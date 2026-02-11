@@ -8,9 +8,9 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/cjavdev/believe-go"
+	"github.com/cjavdev/believe-go/option"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
-	"github.com/stainless-sdks/believe-go"
-	"github.com/stainless-sdks/believe-go/option"
 	"github.com/stainless-sdks/believe-terraform/internal/apijson"
 	"github.com/stainless-sdks/believe-terraform/internal/logging"
 )
