@@ -6,9 +6,9 @@ import (
 	"context"
 
 	"github.com/cjavdev/believe-go"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 type CoachingPrinciplesDataListDataSourceEnvelope struct {

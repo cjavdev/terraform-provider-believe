@@ -5,11 +5,11 @@ package coaching_principle
 import (
 	"context"
 
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 var _ datasource.DataSourceWithConfigValidators = (*CoachingPrinciplesDataSource)(nil)

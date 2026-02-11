@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/stainless-sdks/believe-terraform/internal/services/biscuit"
-	"github.com/stainless-sdks/believe-terraform/internal/test_helpers"
+	"github.com/cjavdev/terraform-provider-believe/internal/services/biscuit"
+	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestBiscuitsDataSourceModelSchemaParity(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/stainless-sdks/believe-terraform/internal/services/team"
-	"github.com/stainless-sdks/believe-terraform/internal/test_helpers"
+	"github.com/cjavdev/terraform-provider-believe/internal/services/team"
+	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestTeamsDataSourceModelSchemaParity(t *testing.T) {

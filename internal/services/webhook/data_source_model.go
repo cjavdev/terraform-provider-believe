@@ -3,9 +3,9 @@
 package webhook
 
 import (
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework-timetypes/timetypes"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 type WebhookDataSourceModel struct {

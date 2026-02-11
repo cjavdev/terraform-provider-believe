@@ -10,9 +10,9 @@ import (
 
 	"github.com/cjavdev/believe-go"
 	"github.com/cjavdev/believe-go/option"
+	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
+	"github.com/cjavdev/terraform-provider-believe/internal/logging"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
-	"github.com/stainless-sdks/believe-terraform/internal/apijson"
-	"github.com/stainless-sdks/believe-terraform/internal/logging"
 )
 
 type WebhookDataSource struct {

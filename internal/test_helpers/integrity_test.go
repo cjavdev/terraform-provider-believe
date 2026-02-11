@@ -9,8 +9,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
-	"github.com/stainless-sdks/believe-terraform/internal/test_helpers"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
+	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 type empty struct{}

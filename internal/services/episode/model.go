@@ -3,9 +3,9 @@
 package episode
 
 import (
+	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
 	"github.com/hashicorp/terraform-plugin-framework-timetypes/timetypes"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/apijson"
 )
 
 type EpisodeModel struct {

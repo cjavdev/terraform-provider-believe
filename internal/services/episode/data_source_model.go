@@ -7,10 +7,10 @@ import (
 
 	"github.com/cjavdev/believe-go"
 	"github.com/cjavdev/believe-go/packages/param"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework-timetypes/timetypes"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 type EpisodeDataSourceModel struct {

@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/believe-terraform
+module github.com/cjavdev/terraform-provider-believe
 
 go 1.24.0
 

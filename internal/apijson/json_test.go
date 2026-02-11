@@ -19,7 +19,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 )
 
 func P[T any](v T) *T { return &v }
