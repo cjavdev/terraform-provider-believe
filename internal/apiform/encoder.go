@@ -21,8 +21,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	"github.com/stainless-sdks/believe-terraform/internal/apijson"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
+	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 )
 
 var encoders sync.Map // map[encoderEntry]encoderFunc

@@ -5,9 +5,9 @@ package pep_talk
 import (
 	"context"
 
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 var _ datasource.DataSourceWithConfigValidators = (*PepTalkDataSource)(nil)

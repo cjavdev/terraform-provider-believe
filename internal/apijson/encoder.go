@@ -21,7 +21,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 	"github.com/tidwall/sjson"
 
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 )
 
 var explicitJsonNull = []byte("null")

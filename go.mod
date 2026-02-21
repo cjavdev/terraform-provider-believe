@@ -1,8 +1,6 @@
-module github.com/stainless-sdks/believe-terraform
+module github.com/cjavdev/terraform-provider-believe
 
 go 1.24.0
-
-toolchain go1.24.12
 
 require (
 	github.com/davecgh/go-spew v1.1.1

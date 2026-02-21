@@ -3,9 +3,9 @@
 package team
 
 import (
+	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
+	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/apijson"
-	"github.com/stainless-sdks/believe-terraform/internal/customfield"
 )
 
 type TeamModel struct {

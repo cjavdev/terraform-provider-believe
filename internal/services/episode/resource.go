@@ -10,11 +10,11 @@ import (
 
 	"github.com/cjavdev/believe-go"
 	"github.com/cjavdev/believe-go/option"
+	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
+	"github.com/cjavdev/terraform-provider-believe/internal/importpath"
+	"github.com/cjavdev/terraform-provider-believe/internal/logging"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stainless-sdks/believe-terraform/internal/apijson"
-	"github.com/stainless-sdks/believe-terraform/internal/importpath"
-	"github.com/stainless-sdks/believe-terraform/internal/logging"
 )
 
 // Ensure provider defined types fully satisfy framework interfaces.

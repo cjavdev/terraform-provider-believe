@@ -1,6 +1,6 @@
 # Believe Terraform Provider
 
-The [Believe Terraform provider](https://registry.terraform.io/providers/stainless-sdks/believe/latest/docs) provides convenient access to
+The [Believe Terraform provider](https://registry.terraform.io/providers/cjavdev/believe/latest/docs) provides convenient access to
 the Believe REST API from Terraform.
 
 It is generated with [Stainless](https://www.stainless.com/).
@@ -14,13 +14,15 @@ on Hashicorp's website.
 
 Add the following to your `main.tf` file:
 
+<!-- x-release-please-start-version -->
+
 ```hcl
 # Declare the provider and version
 terraform {
   required_providers {
     believe = {
-      source  = "stainless-sdks/believe"
-      version = "~> 0.0.1"
+      source  = "cjavdev/believe"
+      version = "~> 0.0.2"
     }
   }
 }
@@ -36,10 +38,12 @@ resource "believe_character" "example_character" {
 }
 ```
 
+<!-- x-release-please-end -->
+
 Initialize your project by running `terraform init` in the directory.
 
 Additional examples can be found in the [./examples](./examples) folder within this repository, and you can
-refer to the full documentation on [the Terraform Registry](https://registry.terraform.io/providers/stainless-sdks/believe/latest/docs).
+refer to the full documentation on [the Terraform Registry](https://registry.terraform.io/providers/cjavdev/believe/latest/docs).
 
 ### Provider Options
 
@@ -59,7 +63,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/believe-terraform/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/cjavdev/terraform-provider-believe/issues) with questions, bugs, or suggestions.
 
 ## Contributing
 
