@@ -3,7 +3,7 @@ module github.com/cjavdev/terraform-provider-believe
 go 1.24.0
 
 require (
-	github.com/cjavdev/believe-go v0.1.0
+	github.com/cjavdev/believe-go v0.2.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/hashicorp/terraform-plugin-docs v0.16.0
 	github.com/hashicorp/terraform-plugin-framework v1.15.0
