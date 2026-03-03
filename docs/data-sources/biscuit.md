@@ -3,12 +3,12 @@
 page_title: "believe_biscuit Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Interactive endpoints for motivation and guidance
 ---
 
 # believe_biscuit (Data Source)
 
-
+Interactive endpoints for motivation and guidance
 
 ## Example Usage
 

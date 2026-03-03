@@ -3,12 +3,12 @@
 page_title: "believe_team Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Operations related to football teams
 ---
 
 # believe_team (Data Source)
 
-
+Operations related to football teams
 
 ## Example Usage
 

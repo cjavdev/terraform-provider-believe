@@ -3,12 +3,12 @@
 page_title: "believe_webhook Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Register webhook endpoints and trigger events for testing
 ---
 
 # believe_webhook (Data Source)
 
-
+Register webhook endpoints and trigger events for testing
 
 ## Example Usage
 
