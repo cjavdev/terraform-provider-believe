@@ -3,12 +3,12 @@
 page_title: "believe_team_member Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Team members with union types (oneOf) - Players, Coaches, Medical Staff, Equipment Managers
 ---
 
 # believe_team_member (Data Source)
 
-
+Team members with union types (oneOf) - Players, Coaches, Medical Staff, Equipment Managers
 
 ## Example Usage
 

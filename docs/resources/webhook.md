@@ -3,12 +3,12 @@
 page_title: "believe_webhook Resource - believe"
 subcategory: ""
 description: |-
-  
+  Register webhook endpoints and trigger events for testing
 ---
 
 # believe_webhook (Resource)
 
-
+Register webhook endpoints and trigger events for testing
 
 ## Example Usage
 

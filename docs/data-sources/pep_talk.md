@@ -3,12 +3,12 @@
 page_title: "believe_pep_talk Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Server-Sent Events (SSE) streaming endpoints
 ---
 
 # believe_pep_talk (Data Source)
 
-
+Server-Sent Events (SSE) streaming endpoints
 
 ## Example Usage
 

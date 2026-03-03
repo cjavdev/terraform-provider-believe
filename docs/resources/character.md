@@ -3,12 +3,12 @@
 page_title: "believe_character Resource - believe"
 subcategory: ""
 description: |-
-  
+  Operations related to Ted Lasso characters
 ---
 
 # believe_character (Resource)
 
-
+Operations related to Ted Lasso characters
 
 ## Example Usage
 

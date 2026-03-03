@@ -20,6 +20,7 @@ var _ datasource.DataSourceWithConfigValidators = (*QuotesDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Memorable quotes from the show",
 		Attributes: map[string]schema.Attribute{
 			"character_id": schema.StringAttribute{
 				Description: "Filter by character",

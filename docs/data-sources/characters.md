@@ -3,12 +3,12 @@
 page_title: "believe_characters Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Operations related to Ted Lasso characters
 ---
 
 # believe_characters (Data Source)
 
-
+Operations related to Ted Lasso characters
 
 ## Example Usage
 
