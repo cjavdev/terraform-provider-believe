@@ -3,12 +3,12 @@
 page_title: "believe_quote Data Source - believe"
 subcategory: ""
 description: |-
-  
+  Memorable quotes from the show
 ---
 
 # believe_quote (Data Source)
 
-
+Memorable quotes from the show
 
 ## Example Usage
 

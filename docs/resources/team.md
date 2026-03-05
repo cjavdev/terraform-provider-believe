@@ -3,12 +3,12 @@
 page_title: "believe_team Resource - believe"
 subcategory: ""
 description: |-
-  
+  Operations related to football teams
 ---
 
 # believe_team (Resource)
 
-
+Operations related to football teams
 
 ## Example Usage
 

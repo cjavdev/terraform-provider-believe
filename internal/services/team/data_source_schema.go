@@ -21,6 +21,7 @@ var _ datasource.DataSourceWithConfigValidators = (*TeamDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Operations related to football teams",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Computed: true,

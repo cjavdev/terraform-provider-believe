@@ -16,6 +16,7 @@ var _ datasource.DataSourceWithConfigValidators = (*BiscuitDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Interactive endpoints for motivation and guidance",
 		Attributes: map[string]schema.Attribute{
 			"biscuit_id": schema.StringAttribute{
 				Required: true,
