@@ -1,4 +1,4 @@
-resource "believe_client_ticket_sale" "example_client_ticket_sale" {
+resource "believe_ticket_sale" "example_ticket_sale" {
   buyer_name = "Mae Green"
   currency = "GBP"
   discount = "9.00"
