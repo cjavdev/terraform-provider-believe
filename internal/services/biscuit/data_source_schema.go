@@ -38,7 +38,7 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 				Computed:    true,
 			},
 			"type": schema.StringAttribute{
-				Description: "Type of biscuit\nAvailable values: \"classic\", \"shortbread\", \"chocolate_chip\", \"oatmeal_raisin\".",
+				Description: "Type of biscuit\nAvailable values: \"classic\", \"shortbread\", \"chocolate_chip\", \"oatmeal_raisin\", \"snickerdoodle\", \"lemon_drizzle\".",
 				Computed:    true,
 				Validators: []validator.String{
 					stringvalidator.OneOfCaseInsensitive(
@@ -46,6 +46,8 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 						"shortbread",
 						"chocolate_chip",
 						"oatmeal_raisin",
+						"snickerdoodle",
+						"lemon_drizzle",
 					),
 				},
 			},

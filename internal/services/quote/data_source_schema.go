@@ -81,7 +81,7 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 				Computed:    true,
 			},
 			"theme": schema.StringAttribute{
-				Description: "Primary theme of the quote\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\".",
+				Description: "Primary theme of the quote\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\", \"intimidation\", \"ambition\", \"narcissism\", \"maturity\".",
 				Computed:    true,
 				Validators: []validator.String{
 					stringvalidator.OneOfCaseInsensitive(
@@ -112,6 +112,10 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 						"conflict",
 						"honesty",
 						"integrity",
+						"intimidation",
+						"ambition",
+						"narcissism",
+						"maturity",
 					),
 				},
 			},
@@ -155,6 +159,10 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 							"conflict",
 							"honesty",
 							"integrity",
+							"intimidation",
+							"ambition",
+							"narcissism",
+							"maturity",
 						),
 					),
 				},
@@ -196,7 +204,7 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 						},
 					},
 					"theme": schema.StringAttribute{
-						Description: "Filter by theme\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\".",
+						Description: "Filter by theme\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\", \"intimidation\", \"ambition\", \"narcissism\", \"maturity\".",
 						Optional:    true,
 						Validators: []validator.String{
 							stringvalidator.OneOfCaseInsensitive(
@@ -227,6 +235,10 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 								"conflict",
 								"honesty",
 								"integrity",
+								"intimidation",
+								"ambition",
+								"narcissism",
+								"maturity",
 							),
 						},
 					},
