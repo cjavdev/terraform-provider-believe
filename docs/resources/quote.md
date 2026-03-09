@@ -39,7 +39,7 @@ resource "believe_quote" "example_quote" {
 Available values: "halftime_speech", "press_conference", "locker_room", "training", "biscuits_with_boss", "pub", "one_on_one", "celebration", "crisis", "casual", "confrontation".
 - `text` (String) The quote text
 - `theme` (String) Primary theme of the quote
-Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity".
+Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity", "intimidation", "ambition", "narcissism", "maturity".
 
 ### Optional
 

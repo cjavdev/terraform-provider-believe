@@ -39,5 +39,5 @@ Read-Only:
 - `pairs_well_with` (String) What this biscuit pairs well with
 - `ted_note` (String) A handwritten note from Ted
 - `type` (String) Type of biscuit
-Available values: "classic", "shortbread", "chocolate_chip", "oatmeal_raisin".
+Available values: "classic", "shortbread", "chocolate_chip", "oatmeal_raisin", "snickerdoodle", "lemon_drizzle".
 - `warmth_level` (Number) How warm and fresh (1-10)
