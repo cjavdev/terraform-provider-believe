@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"context"
@@ -12,21 +12,21 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-type ClientTicketSalesDataListDataSourceEnvelope struct {
-	Data customfield.NestedObjectList[ClientTicketSalesItemsDataSourceModel] `json:"data,computed"`
+type TicketSalesDataListDataSourceEnvelope struct {
+	Data customfield.NestedObjectList[TicketSalesItemsDataSourceModel] `json:"data,computed"`
 }
 
-type ClientTicketSalesDataSourceModel struct {
-	CouponCode     types.String                                                        `tfsdk:"coupon_code" query:"coupon_code,optional"`
-	Currency       types.String                                                        `tfsdk:"currency" query:"currency,optional"`
-	MatchID        types.String                                                        `tfsdk:"match_id" query:"match_id,optional"`
-	PurchaseMethod types.String                                                        `tfsdk:"purchase_method" query:"purchase_method,optional"`
-	MaxItems       types.Int64                                                         `tfsdk:"max_items"`
-	Items          customfield.NestedObjectList[ClientTicketSalesItemsDataSourceModel] `tfsdk:"items"`
+type TicketSalesDataSourceModel struct {
+	CouponCode     types.String                                                  `tfsdk:"coupon_code" query:"coupon_code,optional"`
+	Currency       types.String                                                  `tfsdk:"currency" query:"currency,optional"`
+	MatchID        types.String                                                  `tfsdk:"match_id" query:"match_id,optional"`
+	PurchaseMethod types.String                                                  `tfsdk:"purchase_method" query:"purchase_method,optional"`
+	MaxItems       types.Int64                                                   `tfsdk:"max_items"`
+	Items          customfield.NestedObjectList[TicketSalesItemsDataSourceModel] `tfsdk:"items"`
 }
 
-func (m *ClientTicketSalesDataSourceModel) toListParams(_ context.Context) (params believe.ClientTicketSaleListParams, diags diag.Diagnostics) {
-	params = believe.ClientTicketSaleListParams{}
+func (m *TicketSalesDataSourceModel) toListParams(_ context.Context) (params believe.TicketSaleListParams, diags diag.Diagnostics) {
+	params = believe.TicketSaleListParams{}
 
 	if !m.CouponCode.IsNull() {
 		params.CouponCode = param.NewOpt(m.CouponCode.ValueString())
@@ -38,13 +38,13 @@ func (m *ClientTicketSalesDataSourceModel) toListParams(_ context.Context) (para
 		params.MatchID = param.NewOpt(m.MatchID.ValueString())
 	}
 	if !m.PurchaseMethod.IsNull() {
-		params.PurchaseMethod = believe.ClientTicketSaleListParamsPurchaseMethod(m.PurchaseMethod.ValueString())
+		params.PurchaseMethod = believe.PurchaseMethod(m.PurchaseMethod.ValueString())
 	}
 
 	return
 }
 
-type ClientTicketSalesItemsDataSourceModel struct {
+type TicketSalesItemsDataSourceModel struct {
 	ID             types.String `tfsdk:"id" json:"id,computed"`
 	BuyerName      types.String `tfsdk:"buyer_name" json:"buyer_name,computed"`
 	Currency       types.String `tfsdk:"currency" json:"currency,computed"`

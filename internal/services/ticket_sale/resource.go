@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"context"
@@ -18,24 +18,24 @@ import (
 )
 
 // Ensure provider defined types fully satisfy framework interfaces.
-var _ resource.ResourceWithConfigure = (*ClientTicketSaleResource)(nil)
-var _ resource.ResourceWithModifyPlan = (*ClientTicketSaleResource)(nil)
-var _ resource.ResourceWithImportState = (*ClientTicketSaleResource)(nil)
+var _ resource.ResourceWithConfigure = (*TicketSaleResource)(nil)
+var _ resource.ResourceWithModifyPlan = (*TicketSaleResource)(nil)
+var _ resource.ResourceWithImportState = (*TicketSaleResource)(nil)
 
 func NewResource() resource.Resource {
-	return &ClientTicketSaleResource{}
+	return &TicketSaleResource{}
 }
 
-// ClientTicketSaleResource defines the resource implementation.
-type ClientTicketSaleResource struct {
+// TicketSaleResource defines the resource implementation.
+type TicketSaleResource struct {
 	client *believe.Client
 }
 
-func (r *ClientTicketSaleResource) Metadata(ctx context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_client_ticket_sale"
+func (r *TicketSaleResource) Metadata(ctx context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
+	resp.TypeName = req.ProviderTypeName + "_ticket_sale"
 }
 
-func (r *ClientTicketSaleResource) Configure(ctx context.Context, req resource.ConfigureRequest, resp *resource.ConfigureResponse) {
+func (r *TicketSaleResource) Configure(ctx context.Context, req resource.ConfigureRequest, resp *resource.ConfigureResponse) {
 	if req.ProviderData == nil {
 		return
 	}
@@ -54,8 +54,8 @@ func (r *ClientTicketSaleResource) Configure(ctx context.Context, req resource.C
 	r.client = client
 }
 
-func (r *ClientTicketSaleResource) Create(ctx context.Context, req resource.CreateRequest, resp *resource.CreateResponse) {
-	var data *ClientTicketSaleModel
+func (r *TicketSaleResource) Create(ctx context.Context, req resource.CreateRequest, resp *resource.CreateResponse) {
+	var data *TicketSaleModel
 
 	resp.Diagnostics.Append(req.Plan.Get(ctx, &data)...)
 
@@ -69,9 +69,9 @@ func (r *ClientTicketSaleResource) Create(ctx context.Context, req resource.Crea
 		return
 	}
 	res := new(http.Response)
-	_, err = r.client.Client.TicketSales.New(
+	_, err = r.client.TicketSales.New(
 		ctx,
-		believe.ClientTicketSaleNewParams{},
+		believe.TicketSaleNewParams{},
 		option.WithRequestBody("application/json", dataBytes),
 		option.WithResponseBodyInto(&res),
 		option.WithMiddleware(logging.Middleware(ctx)),
@@ -90,8 +90,8 @@ func (r *ClientTicketSaleResource) Create(ctx context.Context, req resource.Crea
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-func (r *ClientTicketSaleResource) Update(ctx context.Context, req resource.UpdateRequest, resp *resource.UpdateResponse) {
-	var data *ClientTicketSaleModel
+func (r *TicketSaleResource) Update(ctx context.Context, req resource.UpdateRequest, resp *resource.UpdateResponse) {
+	var data *TicketSaleModel
 
 	resp.Diagnostics.Append(req.Plan.Get(ctx, &data)...)
 
@@ -99,7 +99,7 @@ func (r *ClientTicketSaleResource) Update(ctx context.Context, req resource.Upda
 		return
 	}
 
-	var state *ClientTicketSaleModel
+	var state *TicketSaleModel
 
 	resp.Diagnostics.Append(req.State.Get(ctx, &state)...)
 
@@ -113,10 +113,10 @@ func (r *ClientTicketSaleResource) Update(ctx context.Context, req resource.Upda
 		return
 	}
 	res := new(http.Response)
-	_, err = r.client.Client.TicketSales.Update(
+	_, err = r.client.TicketSales.Update(
 		ctx,
 		data.ID.ValueString(),
-		believe.ClientTicketSaleUpdateParams{},
+		believe.TicketSaleUpdateParams{},
 		option.WithRequestBody("application/json", dataBytes),
 		option.WithResponseBodyInto(&res),
 		option.WithMiddleware(logging.Middleware(ctx)),
@@ -135,8 +135,8 @@ func (r *ClientTicketSaleResource) Update(ctx context.Context, req resource.Upda
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-func (r *ClientTicketSaleResource) Read(ctx context.Context, req resource.ReadRequest, resp *resource.ReadResponse) {
-	var data *ClientTicketSaleModel
+func (r *TicketSaleResource) Read(ctx context.Context, req resource.ReadRequest, resp *resource.ReadResponse) {
+	var data *TicketSaleModel
 
 	resp.Diagnostics.Append(req.State.Get(ctx, &data)...)
 
@@ -145,7 +145,7 @@ func (r *ClientTicketSaleResource) Read(ctx context.Context, req resource.ReadRe
 	}
 
 	res := new(http.Response)
-	_, err := r.client.Client.TicketSales.Get(
+	_, err := r.client.TicketSales.Get(
 		ctx,
 		data.ID.ValueString(),
 		option.WithResponseBodyInto(&res),
@@ -170,8 +170,8 @@ func (r *ClientTicketSaleResource) Read(ctx context.Context, req resource.ReadRe
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-func (r *ClientTicketSaleResource) Delete(ctx context.Context, req resource.DeleteRequest, resp *resource.DeleteResponse) {
-	var data *ClientTicketSaleModel
+func (r *TicketSaleResource) Delete(ctx context.Context, req resource.DeleteRequest, resp *resource.DeleteResponse) {
+	var data *TicketSaleModel
 
 	resp.Diagnostics.Append(req.State.Get(ctx, &data)...)
 
@@ -179,7 +179,7 @@ func (r *ClientTicketSaleResource) Delete(ctx context.Context, req resource.Dele
 		return
 	}
 
-	err := r.client.Client.TicketSales.Delete(
+	err := r.client.TicketSales.Delete(
 		ctx,
 		data.ID.ValueString(),
 		option.WithMiddleware(logging.Middleware(ctx)),
@@ -192,8 +192,8 @@ func (r *ClientTicketSaleResource) Delete(ctx context.Context, req resource.Dele
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-func (r *ClientTicketSaleResource) ImportState(ctx context.Context, req resource.ImportStateRequest, resp *resource.ImportStateResponse) {
-	var data = new(ClientTicketSaleModel)
+func (r *TicketSaleResource) ImportState(ctx context.Context, req resource.ImportStateRequest, resp *resource.ImportStateResponse) {
+	var data = new(TicketSaleModel)
 
 	path := ""
 	diags := importpath.ParseImportID(
@@ -209,7 +209,7 @@ func (r *ClientTicketSaleResource) ImportState(ctx context.Context, req resource
 	data.ID = types.StringValue(path)
 
 	res := new(http.Response)
-	_, err := r.client.Client.TicketSales.Get(
+	_, err := r.client.TicketSales.Get(
 		ctx,
 		path,
 		option.WithResponseBodyInto(&res),
@@ -229,6 +229,6 @@ func (r *ClientTicketSaleResource) ImportState(ctx context.Context, req resource
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-func (r *ClientTicketSaleResource) ModifyPlan(_ context.Context, _ resource.ModifyPlanRequest, _ *resource.ModifyPlanResponse) {
+func (r *TicketSaleResource) ModifyPlan(_ context.Context, _ resource.ModifyPlanRequest, _ *resource.ModifyPlanResponse) {
 
 }

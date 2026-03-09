@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"context"
@@ -15,21 +15,21 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 )
 
-type ClientTicketSaleDataSource struct {
+type TicketSaleDataSource struct {
 	client *believe.Client
 }
 
-var _ datasource.DataSourceWithConfigure = (*ClientTicketSaleDataSource)(nil)
+var _ datasource.DataSourceWithConfigure = (*TicketSaleDataSource)(nil)
 
-func NewClientTicketSaleDataSource() datasource.DataSource {
-	return &ClientTicketSaleDataSource{}
+func NewTicketSaleDataSource() datasource.DataSource {
+	return &TicketSaleDataSource{}
 }
 
-func (d *ClientTicketSaleDataSource) Metadata(ctx context.Context, req datasource.MetadataRequest, resp *datasource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_client_ticket_sale"
+func (d *TicketSaleDataSource) Metadata(ctx context.Context, req datasource.MetadataRequest, resp *datasource.MetadataResponse) {
+	resp.TypeName = req.ProviderTypeName + "_ticket_sale"
 }
 
-func (d *ClientTicketSaleDataSource) Configure(ctx context.Context, req datasource.ConfigureRequest, resp *datasource.ConfigureResponse) {
+func (d *TicketSaleDataSource) Configure(ctx context.Context, req datasource.ConfigureRequest, resp *datasource.ConfigureResponse) {
 	if req.ProviderData == nil {
 		return
 	}
@@ -48,8 +48,8 @@ func (d *ClientTicketSaleDataSource) Configure(ctx context.Context, req datasour
 	d.client = client
 }
 
-func (d *ClientTicketSaleDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
-	var data *ClientTicketSaleDataSourceModel
+func (d *TicketSaleDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
+	var data *TicketSaleDataSourceModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
 
@@ -64,8 +64,8 @@ func (d *ClientTicketSaleDataSource) Read(ctx context.Context, req datasource.Re
 			return
 		}
 
-		env := ClientTicketSalesDataListDataSourceEnvelope{}
-		page, err := d.client.Client.TicketSales.List(ctx, params)
+		env := TicketSalesDataListDataSourceEnvelope{}
+		page, err := d.client.TicketSales.List(ctx, params)
 		if err != nil {
 			resp.Diagnostics.AddError("failed to make http request", err.Error())
 			return
@@ -88,7 +88,7 @@ func (d *ClientTicketSaleDataSource) Read(ctx context.Context, req datasource.Re
 	}
 
 	res := new(http.Response)
-	_, err := d.client.Client.TicketSales.Get(
+	_, err := d.client.TicketSales.Get(
 		ctx,
 		data.TicketSaleID.ValueString(),
 		option.WithResponseBodyInto(&res),

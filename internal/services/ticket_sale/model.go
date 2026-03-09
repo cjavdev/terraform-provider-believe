@@ -1,13 +1,13 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-type ClientTicketSaleModel struct {
+type TicketSaleModel struct {
 	ID             types.String `tfsdk:"id" json:"id,computed"`
 	BuyerName      types.String `tfsdk:"buyer_name" json:"buyer_name,required"`
 	Currency       types.String `tfsdk:"currency" json:"currency,required"`
@@ -23,10 +23,10 @@ type ClientTicketSaleModel struct {
 	CouponCode     types.String `tfsdk:"coupon_code" json:"coupon_code,optional"`
 }
 
-func (m ClientTicketSaleModel) MarshalJSON() (data []byte, err error) {
+func (m TicketSaleModel) MarshalJSON() (data []byte, err error) {
 	return apijson.MarshalRoot(m)
 }
 
-func (m ClientTicketSaleModel) MarshalJSONForUpdate(state ClientTicketSaleModel) (data []byte, err error) {
+func (m TicketSaleModel) MarshalJSONForUpdate(state TicketSaleModel) (data []byte, err error) {
 	return apijson.MarshalForPatch(m, state)
 }

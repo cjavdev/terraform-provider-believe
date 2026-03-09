@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"context"
@@ -14,7 +14,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 )
 
-var _ datasource.DataSourceWithConfigValidators = (*ClientTicketSaleDataSource)(nil)
+var _ datasource.DataSourceWithConfigValidators = (*TicketSaleDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
@@ -118,11 +118,11 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 	}
 }
 
-func (d *ClientTicketSaleDataSource) Schema(ctx context.Context, req datasource.SchemaRequest, resp *datasource.SchemaResponse) {
+func (d *TicketSaleDataSource) Schema(ctx context.Context, req datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = DataSourceSchema(ctx)
 }
 
-func (d *ClientTicketSaleDataSource) ConfigValidators(_ context.Context) []datasource.ConfigValidator {
+func (d *TicketSaleDataSource) ConfigValidators(_ context.Context) []datasource.ConfigValidator {
 	return []datasource.ConfigValidator{
 		datasourcevalidator.ExactlyOneOf(path.MatchRoot("ticket_sale_id"), path.MatchRoot("find_one_by")),
 	}

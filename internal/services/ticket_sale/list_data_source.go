@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package client_ticket_sale
+package ticket_sale
 
 import (
 	"context"
@@ -13,21 +13,21 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 )
 
-type ClientTicketSalesDataSource struct {
+type TicketSalesDataSource struct {
 	client *believe.Client
 }
 
-var _ datasource.DataSourceWithConfigure = (*ClientTicketSalesDataSource)(nil)
+var _ datasource.DataSourceWithConfigure = (*TicketSalesDataSource)(nil)
 
-func NewClientTicketSalesDataSource() datasource.DataSource {
-	return &ClientTicketSalesDataSource{}
+func NewTicketSalesDataSource() datasource.DataSource {
+	return &TicketSalesDataSource{}
 }
 
-func (d *ClientTicketSalesDataSource) Metadata(ctx context.Context, req datasource.MetadataRequest, resp *datasource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_client_ticket_sales"
+func (d *TicketSalesDataSource) Metadata(ctx context.Context, req datasource.MetadataRequest, resp *datasource.MetadataResponse) {
+	resp.TypeName = req.ProviderTypeName + "_ticket_sales"
 }
 
-func (d *ClientTicketSalesDataSource) Configure(ctx context.Context, req datasource.ConfigureRequest, resp *datasource.ConfigureResponse) {
+func (d *TicketSalesDataSource) Configure(ctx context.Context, req datasource.ConfigureRequest, resp *datasource.ConfigureResponse) {
 	if req.ProviderData == nil {
 		return
 	}
@@ -46,8 +46,8 @@ func (d *ClientTicketSalesDataSource) Configure(ctx context.Context, req datasou
 	d.client = client
 }
 
-func (d *ClientTicketSalesDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
-	var data *ClientTicketSalesDataSourceModel
+func (d *TicketSalesDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
+	var data *TicketSalesDataSourceModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
 
@@ -61,13 +61,13 @@ func (d *ClientTicketSalesDataSource) Read(ctx context.Context, req datasource.R
 		return
 	}
 
-	env := ClientTicketSalesDataListDataSourceEnvelope{}
+	env := TicketSalesDataListDataSourceEnvelope{}
 	maxItems := int(data.MaxItems.ValueInt64())
 	acc := []attr.Value{}
 	if maxItems <= 0 {
 		maxItems = 1000
 	}
-	page, err := d.client.Client.TicketSales.List(ctx, params)
+	page, err := d.client.TicketSales.List(ctx, params)
 	if err != nil {
 		resp.Diagnostics.AddError("failed to make http request", err.Error())
 		return
@@ -92,7 +92,7 @@ func (d *ClientTicketSalesDataSource) Read(ctx context.Context, req datasource.R
 	}
 
 	acc = acc[:min(len(acc), maxItems)]
-	result, diags := customfield.NewObjectListFromAttributes[ClientTicketSalesItemsDataSourceModel](ctx, acc)
+	result, diags := customfield.NewObjectListFromAttributes[TicketSalesItemsDataSourceModel](ctx, acc)
 	resp.Diagnostics.Append(diags...)
 	data.Items = result
 
