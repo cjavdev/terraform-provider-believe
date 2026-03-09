@@ -10,6 +10,7 @@ import (
 	"github.com/cjavdev/believe-go/option"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/biscuit"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/character"
+	"github.com/cjavdev/terraform-provider-believe/internal/services/client_ticket_sale"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/coaching_principle"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/episode"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/match"
@@ -114,6 +115,7 @@ func (p *BelieveProvider) Resources(ctx context.Context) []func() resource.Resou
 		quote.NewResource,
 		team_member.NewResource,
 		webhook.NewResource,
+		client_ticket_sale.NewResource,
 	}
 }
 
@@ -138,6 +140,8 @@ func (p *BelieveProvider) DataSources(ctx context.Context) []func() datasource.D
 		team_member.NewTeamMembersDataSource,
 		webhook.NewWebhookDataSource,
 		version.NewVersionDataSource,
+		client_ticket_sale.NewClientTicketSaleDataSource,
+		client_ticket_sale.NewClientTicketSalesDataSource,
 	}
 }
 
