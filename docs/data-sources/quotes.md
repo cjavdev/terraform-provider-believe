@@ -34,7 +34,7 @@ data "believe_quotes" "example_quotes" {
 - `moment_type` (String) Filter by moment type
 Available values: "halftime_speech", "press_conference", "locker_room", "training", "biscuits_with_boss", "pub", "one_on_one", "celebration", "crisis", "casual", "confrontation".
 - `theme` (String) Filter by theme
-Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity".
+Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity", "intimidation", "ambition", "narcissism", "maturity".
 
 ### Read-Only
 
@@ -57,5 +57,5 @@ Available values: "halftime_speech", "press_conference", "locker_room", "trainin
 - `secondary_themes` (List of String) Additional themes
 - `text` (String) The quote text
 - `theme` (String) Primary theme of the quote
-Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity".
+Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "vulnerability", "growth", "humor", "wisdom", "leadership", "love", "forgiveness", "philosophy", "romance", "cultural-pride", "cultural-differences", "antagonism", "celebration", "identity", "isolation", "power", "sacrifice", "standards", "confidence", "conflict", "honesty", "integrity", "intimidation", "ambition", "narcissism", "maturity".
 - `times_shared` (Number) Number of times shared on social media
