@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0 (2026-03-13)
+
+Full Changelog: [v0.0.2...v0.1.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.0.2...v0.1.0)
+
+### Features
+
+* Add ticket sales data model and more examples ([43fdf3f](https://github.com/cjavdev/terraform-provider-believe/commit/43fdf3faa3f77df7d4f4721b9926fa08e73c9e16))
+* **api:** manual updates ([dd2fc03](https://github.com/cjavdev/terraform-provider-believe/commit/dd2fc032188b6fd9506ff28c967e5afb21155ddc))
+* **api:** manual updates ([9eab320](https://github.com/cjavdev/terraform-provider-believe/commit/9eab32003a73f760b16f60739ee9b1f54b79652a))
+
+
+### Chores
+
+* **docs:** update terraform-plugin-docs to v0.24.0 ([44da8fa](https://github.com/cjavdev/terraform-provider-believe/commit/44da8fa2c510555c813ac0c1c2c0cdc1e12d9c5a))
+* **internal:** codegen related update ([6b3b021](https://github.com/cjavdev/terraform-provider-believe/commit/6b3b021dea7d379e48dbfddaa5853f429ea81266))
+* **internal:** codegen related update ([9d11fa7](https://github.com/cjavdev/terraform-provider-believe/commit/9d11fa72b1db295b791da1513e9bd3d98bafc724))
+* **internal:** codegen related update ([45044db](https://github.com/cjavdev/terraform-provider-believe/commit/45044db4c16f67f6215a92beb867d8a4b6988003))
+
 ## 0.0.2 (2026-02-20)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/cjavdev/terraform-provider-believe/compare/v0.0.1...v0.0.2)

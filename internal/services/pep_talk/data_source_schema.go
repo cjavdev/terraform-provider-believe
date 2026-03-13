@@ -14,6 +14,7 @@ var _ datasource.DataSourceWithConfigValidators = (*PepTalkDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Server-Sent Events (SSE) streaming endpoints",
 		Attributes: map[string]schema.Attribute{
 			"stream": schema.BoolAttribute{
 				Description: "If true, returns SSE stream instead of full response",

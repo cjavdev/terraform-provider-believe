@@ -22,6 +22,7 @@ var _ resource.ResourceWithConfigValidators = (*QuoteResource)(nil)
 
 func ResourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Memorable quotes from the show",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Description:   "Unique identifier",
@@ -60,7 +61,7 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 				Required:    true,
 			},
 			"theme": schema.StringAttribute{
-				Description: "Primary theme of the quote\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\".",
+				Description: "Primary theme of the quote\nAvailable values: \"belief\", \"teamwork\", \"curiosity\", \"kindness\", \"resilience\", \"vulnerability\", \"growth\", \"humor\", \"wisdom\", \"leadership\", \"love\", \"forgiveness\", \"philosophy\", \"romance\", \"cultural-pride\", \"cultural-differences\", \"antagonism\", \"celebration\", \"identity\", \"isolation\", \"power\", \"sacrifice\", \"standards\", \"confidence\", \"conflict\", \"honesty\", \"integrity\", \"intimidation\", \"ambition\", \"narcissism\", \"maturity\".",
 				Required:    true,
 				Validators: []validator.String{
 					stringvalidator.OneOfCaseInsensitive(
@@ -91,6 +92,10 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 						"conflict",
 						"honesty",
 						"integrity",
+						"intimidation",
+						"ambition",
+						"narcissism",
+						"maturity",
 					),
 				},
 			},
@@ -145,6 +150,10 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 							"conflict",
 							"honesty",
 							"integrity",
+							"intimidation",
+							"ambition",
+							"narcissism",
+							"maturity",
 						),
 					),
 				},

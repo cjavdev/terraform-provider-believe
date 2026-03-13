@@ -20,6 +20,7 @@ var _ resource.ResourceWithConfigValidators = (*EpisodeResource)(nil)
 
 func ResourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Operations related to TV episodes",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Description:   "Unique identifier (format: s##e##)",
