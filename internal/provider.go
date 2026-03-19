@@ -17,6 +17,7 @@ import (
 	"github.com/cjavdev/terraform-provider-believe/internal/services/quote"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/team"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/team_member"
+	"github.com/cjavdev/terraform-provider-believe/internal/services/webhook"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
@@ -111,6 +112,7 @@ func (p *BelieveProvider) Resources(ctx context.Context) []func() resource.Resou
 		episode.NewResource,
 		quote.NewResource,
 		team_member.NewResource,
+		webhook.NewResource,
 	}
 }
 
@@ -133,6 +135,7 @@ func (p *BelieveProvider) DataSources(ctx context.Context) []func() datasource.D
 		pep_talk.NewPepTalkDataSource,
 		team_member.NewTeamMemberDataSource,
 		team_member.NewTeamMembersDataSource,
+		webhook.NewWebhookDataSource,
 	}
 }
 
