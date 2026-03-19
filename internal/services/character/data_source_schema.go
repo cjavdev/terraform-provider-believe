@@ -79,6 +79,7 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 			"salary_gbp": schema.StringAttribute{
 				Description: "Annual salary in GBP",
 				Computed:    true,
+				Sensitive:   true,
 			},
 			"team_id": schema.StringAttribute{
 				Description: "ID of the team they belong to",

@@ -52,7 +52,7 @@ Read-Only:
 - `profile_image_url` (String) URL to character's profile image
 - `role` (String) Character's role
 Available values: "coach", "player", "owner", "manager", "staff", "journalist", "family", "friend", "fan", "other".
-- `salary_gbp` (String) Annual salary in GBP
+- `salary_gbp` (String, Sensitive) Annual salary in GBP
 - `signature_quotes` (List of String) Memorable quotes from this character
 - `team_id` (String) ID of the team they belong to
 
