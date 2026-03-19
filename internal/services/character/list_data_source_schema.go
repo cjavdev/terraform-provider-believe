@@ -197,7 +197,6 @@ func ListDataSourceSchema(ctx context.Context) schema.Schema {
 						"salary_gbp": schema.StringAttribute{
 							Description: "Annual salary in GBP",
 							Computed:    true,
-							Sensitive:   true,
 						},
 						"signature_quotes": schema.ListAttribute{
 							Description: "Memorable quotes from this character",
