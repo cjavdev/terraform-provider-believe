@@ -24,6 +24,7 @@ var _ resource.ResourceWithConfigValidators = (*TeamMemberResource)(nil)
 
 func ResourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
+		Description: "Team members with union types (oneOf) - Players, Coaches, Medical Staff, Equipment Managers",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Description:   "Unique identifier for this team membership",
