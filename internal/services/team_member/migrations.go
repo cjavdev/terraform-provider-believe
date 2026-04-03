@@ -3,13 +3,13 @@
 package team_member
 
 import (
-	"context"
+  "context"
 
-	"github.com/hashicorp/terraform-plugin-framework/resource"
+  "github.com/hashicorp/terraform-plugin-framework/resource"
 )
 
 var _ resource.ResourceWithUpgradeState = (*TeamMemberResource)(nil)
 
-func (r *TeamMemberResource) UpgradeState(ctx context.Context) map[int64]resource.StateUpgrader {
-	return map[int64]resource.StateUpgrader{}
+func (r *TeamMemberResource) UpgradeState(ctx context.Context) (map[int64]resource.StateUpgrader) {
+  return map[int64]resource.StateUpgrader{}
 }

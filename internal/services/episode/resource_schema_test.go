@@ -3,17 +3,17 @@
 package episode_test
 
 import (
-	"context"
-	"testing"
+  "context"
+  "testing"
 
-	"github.com/cjavdev/terraform-provider-believe/internal/services/episode"
-	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
+  "github.com/cjavdev/terraform-provider-believe/internal/services/episode"
+  "github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestEpisodeModelSchemaParity(t *testing.T) {
-	t.Parallel()
-	model := (*episode.EpisodeModel)(nil)
-	schema := episode.ResourceSchema(context.TODO())
-	errs := test_helpers.ValidateResourceModelSchemaIntegrity(model, schema)
-	errs.Report(t)
+  t.Parallel()
+  model := (*episode.EpisodeModel)(nil)
+  schema := episode.ResourceSchema(context.TODO())
+  errs := test_helpers.ValidateResourceModelSchemaIntegrity(model, schema)
+  errs.Report(t)
 }

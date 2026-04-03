@@ -16,13 +16,11 @@ You can also [install go 1.22+ manually](https://go.dev/doc/install).
 You can build the provider locally and have your `.tf` files refer to the local build instead of the one in the Hashicorp registry.
 
 First, build the provider binary:
-
 ```sh
 $ ./scripts/build
 ```
 
 Then edit (or create) your `~/.terraformrc` to look something like this:
-
 ```hcl
   provider_installation {
     dev_overrides {
@@ -56,6 +54,7 @@ This library uses the standard gofmt code formatter:
 ```sh
 $ ./scripts/format
 ```
+
 
 ## Running Tests
 

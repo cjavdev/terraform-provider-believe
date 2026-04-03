@@ -3,17 +3,17 @@
 package team_member_test
 
 import (
-	"context"
-	"testing"
+  "context"
+  "testing"
 
-	"github.com/cjavdev/terraform-provider-believe/internal/services/team_member"
-	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
+  "github.com/cjavdev/terraform-provider-believe/internal/services/team_member"
+  "github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestTeamMembersDataSourceModelSchemaParity(t *testing.T) {
-	t.Parallel()
-	model := (*team_member.TeamMembersDataSourceModel)(nil)
-	schema := team_member.ListDataSourceSchema(context.TODO())
-	errs := test_helpers.ValidateDataSourceModelSchemaIntegrity(model, schema)
-	errs.Report(t)
+  t.Parallel()
+  model := (*team_member.TeamMembersDataSourceModel)(nil)
+  schema := team_member.ListDataSourceSchema(context.TODO())
+  errs := test_helpers.ValidateDataSourceModelSchemaIntegrity(model, schema)
+  errs.Report(t)
 }

@@ -3,17 +3,17 @@
 package version_test
 
 import (
-	"context"
-	"testing"
+  "context"
+  "testing"
 
-	"github.com/cjavdev/terraform-provider-believe/internal/services/version"
-	"github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
+  "github.com/cjavdev/terraform-provider-believe/internal/services/version"
+  "github.com/cjavdev/terraform-provider-believe/internal/test_helpers"
 )
 
 func TestVersionDataSourceModelSchemaParity(t *testing.T) {
-	t.Parallel()
-	model := (*version.VersionDataSourceModel)(nil)
-	schema := version.DataSourceSchema(context.TODO())
-	errs := test_helpers.ValidateDataSourceModelSchemaIntegrity(model, schema)
-	errs.Report(t)
+  t.Parallel()
+  model := (*version.VersionDataSourceModel)(nil)
+  schema := version.DataSourceSchema(context.TODO())
+  errs := test_helpers.ValidateDataSourceModelSchemaIntegrity(model, schema)
+  errs.Report(t)
 }

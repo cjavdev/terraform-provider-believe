@@ -3,76 +3,76 @@
 package version
 
 import (
-	"context"
-	"fmt"
-	"io"
-	"net/http"
+  "context"
+  "fmt"
+  "io"
+  "net/http"
 
-	"github.com/cjavdev/believe-go"
-	"github.com/cjavdev/believe-go/option"
-	"github.com/cjavdev/terraform-provider-believe/internal/apijson"
-	"github.com/cjavdev/terraform-provider-believe/internal/logging"
-	"github.com/hashicorp/terraform-plugin-framework/datasource"
+  "github.com/cjavdev/believe-go"
+  "github.com/cjavdev/believe-go/option"
+  "github.com/cjavdev/terraform-provider-believe/internal/apijson"
+  "github.com/cjavdev/terraform-provider-believe/internal/logging"
+  "github.com/hashicorp/terraform-plugin-framework/datasource"
 )
 
 type VersionDataSource struct {
-	client *believe.Client
+  client *believe.Client
 }
 
 var _ datasource.DataSourceWithConfigure = (*VersionDataSource)(nil)
 
 func NewVersionDataSource() datasource.DataSource {
-	return &VersionDataSource{}
+  return &VersionDataSource{}
 }
 
 func (d *VersionDataSource) Metadata(ctx context.Context, req datasource.MetadataRequest, resp *datasource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_version"
+  resp.TypeName = req.ProviderTypeName + "_version"
 }
 
 func (d *VersionDataSource) Configure(ctx context.Context, req datasource.ConfigureRequest, resp *datasource.ConfigureResponse) {
-	if req.ProviderData == nil {
-		return
-	}
+  if req.ProviderData == nil {
+    return
+  }
 
-	client, ok := req.ProviderData.(*believe.Client)
+  client, ok := req.ProviderData.(*believe.Client)
 
-	if !ok {
-		resp.Diagnostics.AddError(
-			"unexpected resource configure type",
-			fmt.Sprintf("Expected *believe.Client, got: %T. Please report this issue to the provider developers.", req.ProviderData),
-		)
+  if !ok {
+    resp.Diagnostics.AddError(
+      "unexpected resource configure type",
+      fmt.Sprintf("Expected *believe.Client, got: %T. Please report this issue to the provider developers.", req.ProviderData),
+    )
 
-		return
-	}
+    return
+  }
 
-	d.client = client
+  d.client = client
 }
 
 func (d *VersionDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
-	var data *VersionDataSourceModel
+  var data *VersionDataSourceModel
 
-	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
+  resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
 
-	if resp.Diagnostics.HasError() {
-		return
-	}
+  if resp.Diagnostics.HasError() {
+    return
+  }
 
-	res := new(http.Response)
-	_, err := d.client.Version.Get(
-		ctx,
-		option.WithResponseBodyInto(&res),
-		option.WithMiddleware(logging.Middleware(ctx)),
-	)
-	if err != nil {
-		resp.Diagnostics.AddError("failed to make http request", err.Error())
-		return
-	}
-	bytes, _ := io.ReadAll(res.Body)
-	err = apijson.UnmarshalComputed(bytes, &data)
-	if err != nil {
-		resp.Diagnostics.AddError("failed to deserialize http request", err.Error())
-		return
-	}
+  res := new(http.Response)
+  _, err := d.client.Version.Get(
+    ctx,
+    option.WithResponseBodyInto(&res),
+    option.WithMiddleware(logging.Middleware(ctx)),
+  )
+  if err != nil {
+    resp.Diagnostics.AddError("failed to make http request", err.Error())
+    return
+  }
+  bytes, _ := io.ReadAll(res.Body)
+  err = apijson.UnmarshalComputed(bytes, &data)
+  if err != nil {
+    resp.Diagnostics.AddError("failed to deserialize http request", err.Error())
+    return
+  }
 
-	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
+  resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }

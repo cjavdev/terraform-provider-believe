@@ -3,13 +3,13 @@
 package character
 
 import (
-	"context"
+  "context"
 
-	"github.com/hashicorp/terraform-plugin-framework/resource"
+  "github.com/hashicorp/terraform-plugin-framework/resource"
 )
 
 var _ resource.ResourceWithUpgradeState = (*CharacterResource)(nil)
 
-func (r *CharacterResource) UpgradeState(ctx context.Context) map[int64]resource.StateUpgrader {
-	return map[int64]resource.StateUpgrader{}
+func (r *CharacterResource) UpgradeState(ctx context.Context) (map[int64]resource.StateUpgrader) {
+  return map[int64]resource.StateUpgrader{}
 }

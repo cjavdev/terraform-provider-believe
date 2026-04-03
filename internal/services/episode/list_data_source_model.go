@@ -3,55 +3,57 @@
 package episode
 
 import (
-	"context"
+  "context"
 
-	"github.com/cjavdev/believe-go"
-	"github.com/cjavdev/believe-go/packages/param"
-	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
-	"github.com/hashicorp/terraform-plugin-framework-timetypes/timetypes"
-	"github.com/hashicorp/terraform-plugin-framework/diag"
-	"github.com/hashicorp/terraform-plugin-framework/types"
+  "github.com/cjavdev/believe-go"
+  "github.com/cjavdev/believe-go/packages/param"
+  "github.com/cjavdev/terraform-provider-believe/internal/customfield"
+  "github.com/hashicorp/terraform-plugin-framework-timetypes/timetypes"
+  "github.com/hashicorp/terraform-plugin-framework/diag"
+  "github.com/hashicorp/terraform-plugin-framework/types"
 )
 
 type EpisodesDataListDataSourceEnvelope struct {
-	Data customfield.NestedObjectList[EpisodesItemsDataSourceModel] `json:"data,computed"`
+Data customfield.NestedObjectList[EpisodesItemsDataSourceModel] `json:"data,computed"`
 }
 
 type EpisodesDataSourceModel struct {
-	CharacterFocus types.String                                               `tfsdk:"character_focus" query:"character_focus,optional"`
-	Season         types.Int64                                                `tfsdk:"season" query:"season,optional"`
-	MaxItems       types.Int64                                                `tfsdk:"max_items"`
-	Items          customfield.NestedObjectList[EpisodesItemsDataSourceModel] `tfsdk:"items"`
+CharacterFocus types.String `tfsdk:"character_focus" query:"character_focus,optional"`
+Season types.Int64 `tfsdk:"season" query:"season,optional"`
+MaxItems types.Int64 `tfsdk:"max_items"`
+Items customfield.NestedObjectList[EpisodesItemsDataSourceModel] `tfsdk:"items"`
 }
 
 func (m *EpisodesDataSourceModel) toListParams(_ context.Context) (params believe.EpisodeListParams, diags diag.Diagnostics) {
-	params = believe.EpisodeListParams{}
+  params = believe.EpisodeListParams{
 
-	if !m.CharacterFocus.IsNull() {
-		params.CharacterFocus = param.NewOpt(m.CharacterFocus.ValueString())
-	}
-	if !m.Season.IsNull() {
-		params.Season = param.NewOpt(m.Season.ValueInt64())
-	}
+  }
 
-	return
+  if !m.CharacterFocus.IsNull() {
+    params.CharacterFocus = param.NewOpt(m.CharacterFocus.ValueString())
+  }
+  if !m.Season.IsNull() {
+    params.Season = param.NewOpt(m.Season.ValueInt64())
+  }
+
+  return
 }
 
 type EpisodesItemsDataSourceModel struct {
-	ID                     types.String                   `tfsdk:"id" json:"id,computed"`
-	AirDate                timetypes.RFC3339              `tfsdk:"air_date" json:"air_date,computed" format:"date"`
-	CharacterFocus         customfield.List[types.String] `tfsdk:"character_focus" json:"character_focus,computed"`
-	Director               types.String                   `tfsdk:"director" json:"director,computed"`
-	EpisodeNumber          types.Int64                    `tfsdk:"episode_number" json:"episode_number,computed"`
-	MainTheme              types.String                   `tfsdk:"main_theme" json:"main_theme,computed"`
-	RuntimeMinutes         types.Int64                    `tfsdk:"runtime_minutes" json:"runtime_minutes,computed"`
-	Season                 types.Int64                    `tfsdk:"season" json:"season,computed"`
-	Synopsis               types.String                   `tfsdk:"synopsis" json:"synopsis,computed"`
-	TedWisdom              types.String                   `tfsdk:"ted_wisdom" json:"ted_wisdom,computed"`
-	Title                  types.String                   `tfsdk:"title" json:"title,computed"`
-	Writer                 types.String                   `tfsdk:"writer" json:"writer,computed"`
-	BiscuitsWithBossMoment types.String                   `tfsdk:"biscuits_with_boss_moment" json:"biscuits_with_boss_moment,computed"`
-	MemorableMoments       customfield.List[types.String] `tfsdk:"memorable_moments" json:"memorable_moments,computed"`
-	UsViewersMillions      types.Float64                  `tfsdk:"us_viewers_millions" json:"us_viewers_millions,computed"`
-	ViewerRating           types.Float64                  `tfsdk:"viewer_rating" json:"viewer_rating,computed"`
+ID types.String `tfsdk:"id" json:"id,computed"`
+AirDate timetypes.RFC3339 `tfsdk:"air_date" json:"air_date,computed" format:"date"`
+CharacterFocus customfield.List[types.String] `tfsdk:"character_focus" json:"character_focus,computed"`
+Director types.String `tfsdk:"director" json:"director,computed"`
+EpisodeNumber types.Int64 `tfsdk:"episode_number" json:"episode_number,computed"`
+MainTheme types.String `tfsdk:"main_theme" json:"main_theme,computed"`
+RuntimeMinutes types.Int64 `tfsdk:"runtime_minutes" json:"runtime_minutes,computed"`
+Season types.Int64 `tfsdk:"season" json:"season,computed"`
+Synopsis types.String `tfsdk:"synopsis" json:"synopsis,computed"`
+TedWisdom types.String `tfsdk:"ted_wisdom" json:"ted_wisdom,computed"`
+Title types.String `tfsdk:"title" json:"title,computed"`
+Writer types.String `tfsdk:"writer" json:"writer,computed"`
+BiscuitsWithBossMoment types.String `tfsdk:"biscuits_with_boss_moment" json:"biscuits_with_boss_moment,computed"`
+MemorableMoments customfield.List[types.String] `tfsdk:"memorable_moments" json:"memorable_moments,computed"`
+UsViewersMillions types.Float64 `tfsdk:"us_viewers_millions" json:"us_viewers_millions,computed"`
+ViewerRating types.Float64 `tfsdk:"viewer_rating" json:"viewer_rating,computed"`
 }

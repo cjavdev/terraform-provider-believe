@@ -1,8 +1,8 @@
 package customvalidator_test
 
 import (
-	"context"
 	"github.com/cjavdev/terraform-provider-believe/internal/customvalidator"
+	"context"
 	"math/big"
 	"testing"
 

@@ -3,61 +3,62 @@
 package pep_talk
 
 import (
-	"context"
+  "context"
 
-	"github.com/cjavdev/terraform-provider-believe/internal/customfield"
-	"github.com/hashicorp/terraform-plugin-framework/datasource"
-	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
+  "github.com/cjavdev/terraform-provider-believe/internal/customfield"
+  "github.com/hashicorp/terraform-plugin-framework/datasource"
+  "github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 )
 
 var _ datasource.DataSourceWithConfigValidators = (*PepTalkDataSource)(nil)
 
-func DataSourceSchema(ctx context.Context) schema.Schema {
-	return schema.Schema{
-		Description: "Server-Sent Events (SSE) streaming endpoints",
-		Attributes: map[string]schema.Attribute{
-			"stream": schema.BoolAttribute{
-				Description: "If true, returns SSE stream instead of full response",
-				Computed:    true,
-				Optional:    true,
-			},
-			"text": schema.StringAttribute{
-				Description: "The full pep talk text",
-				Computed:    true,
-			},
-			"chunks": schema.ListNestedAttribute{
-				Description: "Individual chunks of the pep talk",
-				Computed:    true,
-				CustomType:  customfield.NewNestedObjectListType[PepTalkChunksDataSourceModel](ctx),
-				NestedObject: schema.NestedAttributeObject{
-					Attributes: map[string]schema.Attribute{
-						"chunk_id": schema.Int64Attribute{
-							Description: "Chunk sequence number",
-							Computed:    true,
-						},
-						"is_final": schema.BoolAttribute{
-							Description: "Is this the final chunk",
-							Computed:    true,
-						},
-						"text": schema.StringAttribute{
-							Description: "The text of this chunk",
-							Computed:    true,
-						},
-						"emotional_beat": schema.StringAttribute{
-							Description: "The emotional purpose of this chunk (e.g., greeting, acknowledgment, wisdom, affirmation, encouragement)",
-							Computed:    true,
-						},
-					},
-				},
-			},
-		},
-	}
+func DataSourceSchema(ctx context.Context) (schema.Schema) {
+  return schema.Schema{
+    MarkdownDescription: "Server-Sent Events (SSE) streaming endpoints",
+    Attributes: map[string]schema.Attribute{
+      "stream": schema.BoolAttribute{
+        Description: "If true, returns SSE stream instead of full response",
+        Computed: true,
+        Optional: true,
+      },
+      "text": schema.StringAttribute{
+        Description: "The full pep talk text",
+        Computed: true,
+      },
+      "chunks": schema.ListNestedAttribute{
+        Description: "Individual chunks of the pep talk",
+        Computed: true,
+        CustomType: customfield.NewNestedObjectListType[PepTalkChunksDataSourceModel](ctx),
+        NestedObject: schema.NestedAttributeObject{
+          Attributes: map[string]schema.Attribute{
+            "chunk_id": schema.Int64Attribute{
+              Description: "Chunk sequence number",
+              Computed: true,
+            },
+            "is_final": schema.BoolAttribute{
+              Description: "Is this the final chunk",
+              Computed: true,
+            },
+            "text": schema.StringAttribute{
+              Description: "The text of this chunk",
+              Computed: true,
+            },
+            "emotional_beat": schema.StringAttribute{
+              Description: "The emotional purpose of this chunk (e.g., greeting, acknowledgment, wisdom, affirmation, encouragement)",
+              Computed: true,
+            },
+          },
+        },
+      },
+    },
+  }
 }
 
 func (d *PepTalkDataSource) Schema(ctx context.Context, req datasource.SchemaRequest, resp *datasource.SchemaResponse) {
-	resp.Schema = DataSourceSchema(ctx)
+  resp.Schema = DataSourceSchema(ctx)
 }
 
-func (d *PepTalkDataSource) ConfigValidators(_ context.Context) []datasource.ConfigValidator {
-	return []datasource.ConfigValidator{}
+func (d *PepTalkDataSource) ConfigValidators(_ context.Context) ([]datasource.ConfigValidator) {
+  return []datasource.ConfigValidator{
+  }
 }
