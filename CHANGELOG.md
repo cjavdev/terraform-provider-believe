@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.1.0 (2026-04-03)
+
+Full Changelog: [v0.0.2...v0.1.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.0.2...v0.1.0)
+
+### Features
+
+* Add ticket sales data model and more examples ([43fdf3f](https://github.com/cjavdev/terraform-provider-believe/commit/43fdf3faa3f77df7d4f4721b9926fa08e73c9e16))
+* **api:** manual updates ([e844e85](https://github.com/cjavdev/terraform-provider-believe/commit/e844e850cd067736e516cafcb1e84fd66d549804))
+* **api:** manual updates ([1a99daa](https://github.com/cjavdev/terraform-provider-believe/commit/1a99daa36416c77fdbae4f84e80a10f6a41bfef1))
+* **api:** manual updates ([2702020](https://github.com/cjavdev/terraform-provider-believe/commit/27020208a8f2dfdbbac7db340ff5d9cd16bf90ca))
+* **api:** manual updates ([fbb045f](https://github.com/cjavdev/terraform-provider-believe/commit/fbb045f5f4b127607168fe1aa1a0d54b08eea1cd))
+* **api:** manual updates ([5b5f287](https://github.com/cjavdev/terraform-provider-believe/commit/5b5f2873fe2c4392392f0a7b7e21cf4cee3a55ff))
+* **api:** manual updates ([dd2fc03](https://github.com/cjavdev/terraform-provider-believe/commit/dd2fc032188b6fd9506ff28c967e5afb21155ddc))
+* **api:** manual updates ([9eab320](https://github.com/cjavdev/terraform-provider-believe/commit/9eab32003a73f760b16f60739ee9b1f54b79652a))
+* **api:** mark salaray sensitive ([1cca66a](https://github.com/cjavdev/terraform-provider-believe/commit/1cca66a6225c7cfd668827e64308b605540c0d99))
+
+
+### Bug Fixes
+
+* improve linking behavior when developing on a branch not in the Go SDK ([444b25f](https://github.com/cjavdev/terraform-provider-believe/commit/444b25f4a245465251b8c3d94bfca75bef0f2744))
+* no longer require an API key when building on production repos ([2491b16](https://github.com/cjavdev/terraform-provider-believe/commit/2491b163669b0b9a9d4695bde04dbcde31d4226d))
+* patch style requests should never send empty json body for objects ([62b6336](https://github.com/cjavdev/terraform-provider-believe/commit/62b633647d3f29850a6c2ee0ae4e72b1fa3eef94))
+
+
+### Chores
+
+* **docs:** update terraform-plugin-docs to v0.24.0 ([44da8fa](https://github.com/cjavdev/terraform-provider-believe/commit/44da8fa2c510555c813ac0c1c2c0cdc1e12d9c5a))
+* **internal:** codegen related update ([4882dfa](https://github.com/cjavdev/terraform-provider-believe/commit/4882dfa413ddd3d85a0dbb596222d1077f20bee7))
+* **internal:** codegen related update ([6b3b021](https://github.com/cjavdev/terraform-provider-believe/commit/6b3b021dea7d379e48dbfddaa5853f429ea81266))
+* **internal:** codegen related update ([9d11fa7](https://github.com/cjavdev/terraform-provider-believe/commit/9d11fa72b1db295b791da1513e9bd3d98bafc724))
+* **internal:** codegen related update ([45044db](https://github.com/cjavdev/terraform-provider-believe/commit/45044db4c16f67f6215a92beb867d8a4b6988003))
+* **internal:** tweak CI branches ([519e391](https://github.com/cjavdev/terraform-provider-believe/commit/519e3912714e9acf12174169ab481a0f8e352c53))
+* **internal:** update gitignore ([17c74f4](https://github.com/cjavdev/terraform-provider-believe/commit/17c74f4b2f12b4dcb2065cebb3a0f7b9a33824a3))
+
 ## 0.0.2 (2026-02-20)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/cjavdev/terraform-provider-believe/compare/v0.0.1...v0.0.2)
