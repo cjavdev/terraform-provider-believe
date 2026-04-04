@@ -18,7 +18,7 @@ var _ datasource.DataSourceWithConfigValidators = (*TicketSaleDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Ticket sales with 300 records for practicing pagination, filtering, and financial data",
+		MarkdownDescription: "Ticket sales with 300 records for practicing pagination, filtering, and financial data",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Computed: true,

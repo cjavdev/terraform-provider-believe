@@ -20,7 +20,7 @@ var _ datasource.DataSourceWithConfigValidators = (*CharactersDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Operations related to Ted Lasso characters",
+		MarkdownDescription: "Operations related to Ted Lasso characters",
 		Attributes: map[string]schema.Attribute{
 			"min_optimism": schema.Int64Attribute{
 				Description: "Minimum optimism score",
