@@ -19,7 +19,7 @@ var _ datasource.DataSourceWithConfigValidators = (*WebhookDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Register webhook endpoints and trigger events for testing",
+		MarkdownDescription: "Register webhook endpoints and trigger events for testing",
 		Attributes: map[string]schema.Attribute{
 			"webhook_id": schema.StringAttribute{
 				Required: true,

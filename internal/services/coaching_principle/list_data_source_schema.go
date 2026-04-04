@@ -16,7 +16,7 @@ var _ datasource.DataSourceWithConfigValidators = (*CoachingPrinciplesDataSource
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Interactive endpoints for motivation and guidance",
+		MarkdownDescription: "Interactive endpoints for motivation and guidance",
 		Attributes: map[string]schema.Attribute{
 			"max_items": schema.Int64Attribute{
 				Description: "Max items to fetch, default: 1000",

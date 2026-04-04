@@ -17,7 +17,7 @@ var _ datasource.DataSourceWithConfigValidators = (*TicketSalesDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Ticket sales with 300 records for practicing pagination, filtering, and financial data",
+		MarkdownDescription: "Ticket sales with 300 records for practicing pagination, filtering, and financial data",
 		Attributes: map[string]schema.Attribute{
 			"coupon_code": schema.StringAttribute{
 				Description: "Filter by coupon code (use 'none' for sales without coupons)",

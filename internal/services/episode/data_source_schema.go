@@ -21,7 +21,7 @@ var _ datasource.DataSourceWithConfigValidators = (*EpisodeDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Operations related to TV episodes",
+		MarkdownDescription: "Operations related to TV episodes",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Computed: true,
