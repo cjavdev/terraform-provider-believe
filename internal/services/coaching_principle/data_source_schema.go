@@ -13,7 +13,7 @@ var _ datasource.DataSourceWithConfigValidators = (*CoachingPrincipleDataSource)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Interactive endpoints for motivation and guidance",
+		MarkdownDescription: "Interactive endpoints for motivation and guidance",
 		Attributes: map[string]schema.Attribute{
 			"principle_id": schema.StringAttribute{
 				Required: true,

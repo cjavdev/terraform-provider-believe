@@ -22,7 +22,7 @@ var _ datasource.DataSourceWithConfigValidators = (*QuoteDataSource)(nil)
 
 func DataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Memorable quotes from the show",
+		MarkdownDescription: "Memorable quotes from the show",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Computed: true,

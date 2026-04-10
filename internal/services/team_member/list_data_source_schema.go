@@ -19,7 +19,7 @@ var _ datasource.DataSourceWithConfigValidators = (*TeamMembersDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Team members with union types (oneOf) - Players, Coaches, Medical Staff, Equipment Managers",
+		MarkdownDescription: "Team members with union types (oneOf) - Players, Coaches, Medical Staff, Equipment Managers",
 		Attributes: map[string]schema.Attribute{
 			"member_type": schema.StringAttribute{
 				Description: "Filter by member type\nAvailable values: \"player\", \"coach\", \"medical_staff\", \"equipment_manager\".",

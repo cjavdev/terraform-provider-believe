@@ -19,7 +19,7 @@ var _ datasource.DataSourceWithConfigValidators = (*TeamsDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Operations related to football teams",
+		MarkdownDescription: "Operations related to football teams",
 		Attributes: map[string]schema.Attribute{
 			"league": schema.StringAttribute{
 				Description: "Filter by league\nAvailable values: \"Premier League\", \"Championship\", \"League One\", \"League Two\", \"La Liga\", \"Serie A\", \"Bundesliga\", \"Ligue 1\".",

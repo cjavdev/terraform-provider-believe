@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.2.0 (2026-04-10)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* add per-resource api permissions to schema description ([2499d51](https://github.com/cjavdev/terraform-provider-believe/commit/2499d515ac398491f27c3a66a7d9cb9bf3c05ef1))
+
+
+### Bug Fixes
+
+* **ci:** in custom setup-go, pass through go-version and cache-dependency-path ([fa54fae](https://github.com/cjavdev/terraform-provider-believe/commit/fa54fae656c9e448fe10103332732100f9ee9715))
+* fall back to main branch if linking fails in CI ([427f516](https://github.com/cjavdev/terraform-provider-believe/commit/427f51622f7a7e91cba74b46e15005a479d789bd))
+* fix for failing to drop invalid module replace in link script ([5309fc7](https://github.com/cjavdev/terraform-provider-believe/commit/5309fc750af08eeb948fd519dda954933f5df78c))
+* fix quoting typo ([1cf3e60](https://github.com/cjavdev/terraform-provider-believe/commit/1cf3e6075f7efcc356593521d441850a6ae3bc6b))
+
+
+### Chores
+
+* **internal:** codegen related update ([3a93f4a](https://github.com/cjavdev/terraform-provider-believe/commit/3a93f4a0d5d4b9f30f441b3c1bcaa82337752276))
+* pin go releaser version ([285785f](https://github.com/cjavdev/terraform-provider-believe/commit/285785f904496806005fb0a78f6cd5c35f4758bc))
+
 ## 0.1.0 (2026-04-03)
 
 Full Changelog: [v0.0.2...v0.1.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.0.2...v0.1.0)

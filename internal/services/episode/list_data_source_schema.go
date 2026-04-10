@@ -19,7 +19,7 @@ var _ datasource.DataSourceWithConfigValidators = (*EpisodesDataSource)(nil)
 
 func ListDataSourceSchema(ctx context.Context) schema.Schema {
 	return schema.Schema{
-		Description: "Operations related to TV episodes",
+		MarkdownDescription: "Operations related to TV episodes",
 		Attributes: map[string]schema.Attribute{
 			"character_focus": schema.StringAttribute{
 				Description: "Filter by character focus (character ID)",
