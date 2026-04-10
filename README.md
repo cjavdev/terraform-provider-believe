@@ -22,7 +22,7 @@ terraform {
   required_providers {
     believe = {
       source  = "cjavdev/believe"
-      version = "~> 0.2.0"
+      version = "~> 0.0.1"
     }
   }
 }
@@ -46,13 +46,13 @@ Additional examples can be found in the [./examples](./examples) folder within t
 refer to the full documentation on [the Terraform Registry](https://registry.terraform.io/providers/cjavdev/believe/latest/docs).
 
 ### Provider Options
-
 When you initialize the provider, the following options are supported. It is recommended to use environment variables for sensitive values like access tokens.
 If an environment variable is provided, then the option does not need to be set in the terraform source.
 
 | Property | Environment variable | Required | Default value |
 | -------- | -------------------- | -------- | ------------- |
 | api_key  | `BELIEVE_API_KEY`    | true     | —             |
+
 
 ## Semantic versioning
 
