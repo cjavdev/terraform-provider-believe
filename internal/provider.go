@@ -18,7 +18,6 @@ import (
 	"github.com/cjavdev/terraform-provider-believe/internal/services/team"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/team_member"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/ticket_sale"
-	"github.com/cjavdev/terraform-provider-believe/internal/services/version"
 	"github.com/cjavdev/terraform-provider-believe/internal/services/webhook"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -141,7 +140,6 @@ func (p *BelieveProvider) DataSources(ctx context.Context) []func() datasource.D
 		webhook.NewWebhookDataSource,
 		ticket_sale.NewTicketSaleDataSource,
 		ticket_sale.NewTicketSalesDataSource,
-		version.NewVersionDataSource,
 	}
 }
 
