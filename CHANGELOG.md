@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 (2026-04-22)
+
+Full Changelog: [v0.2.1...v0.3.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.2.1...v0.3.0)
+
+### Features
+
+* **api:** manual updates ([75347e0](https://github.com/cjavdev/terraform-provider-believe/commit/75347e04a1e807df5e9103e964efda0df2ff2dc4))
+* **api:** manual updates ([08c7263](https://github.com/cjavdev/terraform-provider-believe/commit/08c7263dfab54f5a65bc141cf0ba0bb8dcf50787))
+
 ## 0.2.1 (2026-04-19)
 
 Full Changelog: [v0.2.0...v0.2.1](https://github.com/cjavdev/terraform-provider-believe/compare/v0.2.0...v0.2.1)
