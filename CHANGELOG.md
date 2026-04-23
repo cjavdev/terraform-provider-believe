@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.1 (2026-04-23)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/cjavdev/terraform-provider-believe/compare/v0.3.0...v0.3.1)
+
+### Bug Fixes
+
+* **tests:** update hc-install to fix PGP key mismatch ([6714348](https://github.com/cjavdev/terraform-provider-believe/commit/67143481c746c9feef8a41e3ee2b6cdf6b2dea58))
+
+
+### Chores
+
+* add local tmpfile directory ([7f12cec](https://github.com/cjavdev/terraform-provider-believe/commit/7f12cec8717c7cd5cab8ee65e17e597086b684b1))
+* **internal:** more robust bootstrap script ([ca5960d](https://github.com/cjavdev/terraform-provider-believe/commit/ca5960d6fbc866e10ae5341bbbe951db9d6d4dc0))
+
 ## 0.3.0 (2026-04-22)
 
 Full Changelog: [v0.2.1...v0.3.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.2.1...v0.3.0)
