@@ -24,8 +24,8 @@ github.com/bmatcuk/doublestar/v4 v4.9.1 h1:X8jg9rRZmJd4yRy7ZeNDRnM+T3ZfHv15JiBJ/
 github.com/bmatcuk/doublestar/v4 v4.9.1/go.mod h1:xBQ8jztBU6kakFMg+8WGxn0c6z1fTSPVIjEY1Wr7jzc=
 github.com/bufbuild/protocompile v0.4.0 h1:LbFKd2XowZvQ/kajzguUp2DC9UEIQhIq77fZZlaQsNA=
 github.com/bufbuild/protocompile v0.4.0/go.mod h1:3v93+mbWn/v3xzN+31nwkJfrEpAUwp+BagBSZWx+TP8=
-github.com/cjavdev/believe-go v0.8.0 h1:21chHHgTxnmoqU9mrhFsEvoj0mnbVvH9QF7jUD1+94s=
-github.com/cjavdev/believe-go v0.8.0/go.mod h1:YVFwvtg8JUTq+ctLccDeUATVJW6zpj+nw1UpbDDKnQ4=
+github.com/cjavdev/believe-go v0.10.0 h1:LXGatNoeo5DgjJu9SzhKrmF9Rlj6gZVgFU32C9NKmhw=
+github.com/cjavdev/believe-go v0.10.0/go.mod h1:YVFwvtg8JUTq+ctLccDeUATVJW6zpj+nw1UpbDDKnQ4=
 github.com/cloudflare/circl v1.6.3 h1:9GPOhQGF9MCYUeXyMYlqTR6a5gTrgR/fBLXvUgtVcg8=
 github.com/cloudflare/circl v1.6.3/go.mod h1:2eXP6Qfat4O/Yhh8BznvKnJ+uzEoTQ6jVKJRn81BiS4=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
