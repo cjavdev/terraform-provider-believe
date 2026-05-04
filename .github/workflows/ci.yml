@@ -15,11 +15,11 @@ on:
       - 'stl-preview-base/**'
 
 env:
-  GOPRIVATE: github.com/cjavdev/believe-go,github.com/stainless-sdks/believe-go
+  GOPRIVATE: github.com/cjavdev/believe-go
 
 jobs:
   lint:
-    runs-on: ${{ github.repository == 'stainless-sdks/believe-terraform' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
+    runs-on: ${{ github.repository == 'cjavdev/terraform-provider-believe' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
     if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
     steps:
       - uses: actions/checkout@v6
@@ -29,9 +29,9 @@ jobs:
           stainless-api-key: ${{ secrets.STAINLESS_API_KEY }}
 
       - name: Link staging branch
-        if: github.repository == 'stainless-sdks/believe-terraform'
+        if: github.repository == 'cjavdev/terraform-provider-believe'
         run: |
-          ./scripts/link 'github.com/stainless-sdks/believe-go@${{ github.ref_name }}' || true
+          ./scripts/link 'github.com/cjavdev/believe-go@${{ github.ref_name }}' || true
 
       - name: Bootstrap
         run: ./scripts/bootstrap
@@ -40,7 +40,7 @@ jobs:
         run: ./scripts/lint
 
   test:
-    runs-on: ${{ github.repository == 'stainless-sdks/believe-terraform' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
+    runs-on: ${{ github.repository == 'cjavdev/terraform-provider-believe' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
     if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
     steps:
       - uses: actions/checkout@v6
@@ -50,9 +50,9 @@ jobs:
           stainless-api-key: ${{ secrets.STAINLESS_API_KEY }}
 
       - name: Link staging branch
-        if: github.repository == 'stainless-sdks/believe-terraform'
+        if: github.repository == 'cjavdev/terraform-provider-believe'
         run: |
-          ./scripts/link 'github.com/stainless-sdks/believe-go@${{ github.ref_name }}' || true
+          ./scripts/link 'github.com/cjavdev/believe-go@${{ github.ref_name }}' || true
 
       - name: Bootstrap
         run: ./scripts/bootstrap
