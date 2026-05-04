@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1 (2026-05-04)
+
+Full Changelog: [v0.4.0...v0.4.1](https://github.com/cjavdev/terraform-provider-believe/compare/v0.4.0...v0.4.1)
+
+### Chores
+
+* **internal:** codegen related update ([d62232e](https://github.com/cjavdev/terraform-provider-believe/commit/d62232e0dd4fb29f8159a758cc6d5ec9d289ac93))
+
 ## 0.4.0 (2026-04-28)
 
 Full Changelog: [v0.3.1...v0.4.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.3.1...v0.4.0)
