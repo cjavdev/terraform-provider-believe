@@ -1,7 +1,13 @@
 # Changelog
 
-<<<<<<< HEAD
-=======
+## [0.4.2](https://github.com/cjavdev/terraform-provider-believe/compare/v0.4.1...v0.4.2) (2026-05-05)
+
+
+### Chores
+
+* regenerate from believe[#56](https://github.com/cjavdev/terraform-provider-believe/issues/56) ([fc7c819](https://github.com/cjavdev/terraform-provider-believe/commit/fc7c8194d580c363df2376e211be72ea8defc7b2))
+* regenerate SDKs from believe[#56](https://github.com/cjavdev/terraform-provider-believe/issues/56) (still publish even half done) ([b268978](https://github.com/cjavdev/terraform-provider-believe/commit/b2689782b14596d9f89db6d55ef552e4479d34fa))
+
 ## 0.4.0 (2026-04-28)
 
 Full Changelog: [v0.3.1...v0.4.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.3.1...v0.4.0)
@@ -29,7 +35,6 @@ Full Changelog: [v0.3.0...v0.3.1](https://github.com/cjavdev/terraform-provider-
 * add local tmpfile directory ([7f12cec](https://github.com/cjavdev/terraform-provider-believe/commit/7f12cec8717c7cd5cab8ee65e17e597086b684b1))
 * **internal:** more robust bootstrap script ([ca5960d](https://github.com/cjavdev/terraform-provider-believe/commit/ca5960d6fbc866e10ae5341bbbe951db9d6d4dc0))
 
->>>>>>> 3fb2f99 (Apply custom code)
 ## 0.3.0 (2026-04-22)
 
 Full Changelog: [v0.2.1...v0.3.0](https://github.com/cjavdev/terraform-provider-believe/compare/v0.2.1...v0.3.0)
