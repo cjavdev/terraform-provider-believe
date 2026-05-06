@@ -22,11 +22,7 @@ terraform {
   required_providers {
     believe = {
       source  = "cjavdev/believe"
-<<<<<<< HEAD
       version = "~> 0.4.2"
-=======
-      version = "~> 0.4.0"
->>>>>>> e8c9adf (Apply custom code)
     }
   }
 }
