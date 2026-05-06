@@ -15,15 +15,15 @@ runs:
   steps:
     - uses: stainless-api/retrieve-github-access-token@v1
       id: get_token
-      if: github.repository == 'cjavdev/terraform-provider-believe'
+      if: github.repository == 'stainless-sdks/believe-terraform'
       with:
-        repo: cjavdev/believe-go
+        repo: stainless-sdks/believe-go
         stainless-api-key: ${{ inputs.stainless-api-key }}
 
     - name: Configure Git for to access Go SDK's staging repo
-      if: github.repository == 'cjavdev/terraform-provider-believe'
+      if: github.repository == 'stainless-sdks/believe-terraform'
       shell: bash
-      run: git config --global url."https://x-access-token:${{ steps.get_token.outputs.github_access_token }}@github.com/cjavdev/believe-go".insteadOf "https://github.com/cjavdev/believe-go"
+      run: git config --global url."https://x-access-token:${{ steps.get_token.outputs.github_access_token }}@github.com/stainless-sdks/believe-go".insteadOf "https://github.com/stainless-sdks/believe-go"
 
     - name: Setup go
       uses: actions/setup-go@v5
