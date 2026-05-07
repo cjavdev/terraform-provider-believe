@@ -19,7 +19,7 @@ env:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.repository == 'cjavdev/terraform-provider-believe' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
     if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
     steps:
       - uses: actions/checkout@v6
@@ -40,7 +40,7 @@ jobs:
         run: ./scripts/lint
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.repository == 'cjavdev/terraform-provider-believe' && 'depot-ubuntu-24.04' || 'ubuntu-latest' }}
     if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
     steps:
       - uses: actions/checkout@v6
