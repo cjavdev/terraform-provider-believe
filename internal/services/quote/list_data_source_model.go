@@ -59,6 +59,7 @@ type QuotesItemsDataSourceModel struct {
 	IsFunny         types.Bool                     `tfsdk:"is_funny" json:"is_funny,computed"`
 	IsInspirational types.Bool                     `tfsdk:"is_inspirational" json:"is_inspirational,computed"`
 	PopularityScore types.Float64                  `tfsdk:"popularity_score" json:"popularity_score,computed"`
+	Season          types.Int64                    `tfsdk:"season" json:"season,computed"`
 	SecondaryThemes customfield.List[types.String] `tfsdk:"secondary_themes" json:"secondary_themes,computed"`
 	TimesShared     types.Int64                    `tfsdk:"times_shared" json:"times_shared,computed"`
 }

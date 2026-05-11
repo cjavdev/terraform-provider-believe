@@ -39,7 +39,7 @@ data "believe_team_member" "example_team_member" {
 - `license_number` (String) Professional license number
 - `member_type` (String) Discriminator field indicating this is a player
 Available values: "player", "coach", "medical_staff", "equipment_manager".
-- `position` (String) Playing position on the field
+- `position` (String) Players position on the field
 Available values: "goalkeeper", "defender", "midfielder", "forward".
 - `qualifications` (List of String) Medical qualifications and degrees
 - `responsibilities` (List of String) List of responsibilities
