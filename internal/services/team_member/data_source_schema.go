@@ -79,7 +79,7 @@ func DataSourceSchema(ctx context.Context) schema.Schema {
 				},
 			},
 			"position": schema.StringAttribute{
-				Description: "Playing position on the field\nAvailable values: \"goalkeeper\", \"defender\", \"midfielder\", \"forward\".",
+				Description: "Players position on the field\nAvailable values: \"goalkeeper\", \"defender\", \"midfielder\", \"forward\".",
 				Computed:    true,
 				Validators: []validator.String{
 					stringvalidator.OneOfCaseInsensitive(

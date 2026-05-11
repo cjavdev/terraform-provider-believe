@@ -54,6 +54,7 @@ Read-Only:
 - `moment_type` (String) Type of moment when the quote was said
 Available values: "halftime_speech", "press_conference", "locker_room", "training", "biscuits_with_boss", "pub", "one_on_one", "celebration", "crisis", "casual", "confrontation".
 - `popularity_score` (Number) Popularity/virality score (0-100)
+- `season` (Number) Season number (1-3) when the quote occurred
 - `secondary_themes` (List of String) Additional themes
 - `text` (String) The quote text
 - `theme` (String) Primary theme of the quote

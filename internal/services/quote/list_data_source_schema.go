@@ -198,6 +198,13 @@ func ListDataSourceSchema(ctx context.Context) schema.Schema {
 								float64validator.Between(0, 100),
 							},
 						},
+						"season": schema.Int64Attribute{
+							Description: "Season number (1-3) when the quote occurred",
+							Computed:    true,
+							Validators: []validator.Int64{
+								int64validator.Between(1, 3),
+							},
+						},
 						"secondary_themes": schema.ListAttribute{
 							Description: "Additional themes",
 							Computed:    true,

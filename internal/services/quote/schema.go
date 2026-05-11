@@ -110,6 +110,13 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 					float64validator.Between(0, 100),
 				},
 			},
+			"season": schema.Int64Attribute{
+				Description: "Season number (1-3) when the quote occurred",
+				Optional:    true,
+				Validators: []validator.Int64{
+					int64validator.Between(1, 3),
+				},
+			},
 			"times_shared": schema.Int64Attribute{
 				Description: "Number of times shared on social media",
 				Optional:    true,
