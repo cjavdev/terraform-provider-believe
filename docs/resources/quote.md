@@ -23,6 +23,7 @@ resource "believe_quote" "example_quote" {
   is_funny = false
   is_inspirational = true
   popularity_score = 98.5
+  season = 1
   secondary_themes = ["leadership", "teamwork"]
   times_shared = 250000
 }
@@ -47,6 +48,7 @@ Available values: "belief", "teamwork", "curiosity", "kindness", "resilience", "
 - `is_funny` (Boolean) Whether this quote is humorous
 - `is_inspirational` (Boolean) Whether this quote is inspirational
 - `popularity_score` (Number) Popularity/virality score (0-100)
+- `season` (Number) Season number (1-3) when the quote occurred
 - `secondary_themes` (List of String) Additional themes
 - `times_shared` (Number) Number of times shared on social media
 
