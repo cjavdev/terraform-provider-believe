@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.3](https://github.com/cjavdev/terraform-provider-believe/compare/v0.4.2...v0.4.3) (2026-05-14)
+
+
+### Chores
+
+* regenerate from believe[#86](https://github.com/cjavdev/terraform-provider-believe/issues/86) (try this) ([49bcb8c](https://github.com/cjavdev/terraform-provider-believe/commit/49bcb8c65bb34615e22f44d76b4e58f383ab7aef))
+* regenerate SDKs from believe[#86](https://github.com/cjavdev/terraform-provider-believe/issues/86) (try this) ([9a3f7ca](https://github.com/cjavdev/terraform-provider-believe/commit/9a3f7cae41dcdde3cafa3f9304bb8e2ffa669fff))
+
 ## 0.3.1 (2026-04-23)
 
 Full Changelog: [v0.3.0...v0.3.1](https://github.com/cjavdev/terraform-provider-believe/compare/v0.3.0...v0.3.1)
