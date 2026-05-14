@@ -16,6 +16,7 @@ type QuoteModel struct {
 	Theme           types.String    `tfsdk:"theme" json:"theme,required"`
 	EpisodeID       types.String    `tfsdk:"episode_id" json:"episode_id,optional"`
 	PopularityScore types.Float64   `tfsdk:"popularity_score" json:"popularity_score,optional"`
+	Season          types.Int64     `tfsdk:"season" json:"season,optional"`
 	TimesShared     types.Int64     `tfsdk:"times_shared" json:"times_shared,optional"`
 	SecondaryThemes *[]types.String `tfsdk:"secondary_themes" json:"secondary_themes,optional"`
 	IsFunny         types.Bool      `tfsdk:"is_funny" json:"is_funny,computed_optional"`

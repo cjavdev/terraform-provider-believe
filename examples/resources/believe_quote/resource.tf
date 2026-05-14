@@ -8,6 +8,7 @@ resource "believe_quote" "example_quote" {
   is_funny = false
   is_inspirational = true
   popularity_score = 98.5
+  season = 1
   secondary_themes = ["leadership", "teamwork"]
   times_shared = 250000
 }

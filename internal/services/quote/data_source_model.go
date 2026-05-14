@@ -22,6 +22,7 @@ type QuoteDataSourceModel struct {
 	IsInspirational types.Bool                     `tfsdk:"is_inspirational" json:"is_inspirational,computed"`
 	MomentType      types.String                   `tfsdk:"moment_type" json:"moment_type,computed"`
 	PopularityScore types.Float64                  `tfsdk:"popularity_score" json:"popularity_score,computed"`
+	Season          types.Int64                    `tfsdk:"season" json:"season,computed"`
 	Text            types.String                   `tfsdk:"text" json:"text,computed"`
 	Theme           types.String                   `tfsdk:"theme" json:"theme,computed"`
 	TimesShared     types.Int64                    `tfsdk:"times_shared" json:"times_shared,computed"`
